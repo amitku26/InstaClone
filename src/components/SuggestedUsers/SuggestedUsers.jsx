@@ -1,44 +1,39 @@
-import { Box, Flex, Link, Text, VStack } from "@chakra-ui/react";
-import SuggestedHeader from "./SuggestedHeader";
-import SuggestedUser from "./SuggestedUser";
-import useGetSuggestedUsers from "../../hooks/useGetSuggestedUsers";
+import { VStack, Flex, Text, Box } from '@chakra-ui/react';
+import SuggestedUser from './SuggestedUser';
+import SuggestedHeader from './SuggestedHeader';
+import useGetSuggestedUsers from '../../hooks/useGetSuggestedUsers';
 
 const SuggestedUsers = () => {
-	const { isLoading, suggestedUsers } = useGetSuggestedUsers();
+  console.log();
+  const { suggestedUsers = [], isLoading } = useGetSuggestedUsers(); // Default to empty array
+  console.log();
+  
+  if (isLoading) return null;
+  
+  return (
+    <VStack py={8} gap={4}>
+      <SuggestedHeader />
+      {suggestedUsers.length !== 0 && (
+        <Flex alignItems={"center"} justifyContent={"space-between"} w={"full"}>
+          <Text fontSize={12} fontWeight={"bold"} color={"gray.500"}>
+            Suggested for you
+          </Text>
+          <Text fontSize={12} fontWeight={"bold"} _hover={{ color: "gray.400" }} cursor={"pointer"}>
+            See All
+          </Text>
+        </Flex>
+      )}
 
-	// optional: render loading skeleton
-	if (isLoading) return null;
+      {suggestedUsers.map((user) => (
+        <SuggestedUser key={user.id} user={user} />
+      ))}
 
-	return (
-		<VStack py={8} px={6} gap={4}>
-			<SuggestedHeader />
-
-			{suggestedUsers.length !== 0 && (
-				<Flex alignItems={"center"} justifyContent={"space-between"} w={"full"}>
-					<Text fontSize={12} fontWeight={"bold"} color={"gray.500"}>
-						Suggested for you
-					</Text>
-					<Text fontSize={12} fontWeight={"bold"} _hover={{ color: "gray.400" }} cursor={"pointer"}>
-						See All
-					</Text>
-				</Flex>
-			)}
-
-			{suggestedUsers.map((user) => (
-				<SuggestedUser user={user} key={user.id} />
-			))}
-
-       <Box 
-       fontSize={12} color={"gray.500"} mt={5} alignSelf={"start"}
-       >
-        © 2024 Built By{" "}
-        <Link href="https://www.linkedin.com/in/amit-kumar-ab1132290/" target="_blank" color="blue.500" fontSize={14}>
-        As a @amitkumar
-        </Link>
-       </Box>
-
+      <Box fontSize={12} color={"gray.500"} mt={5} alignSelf={'start'}>
+        2024 Built by Amit
+      </Box>
     </VStack>
-  )
+  );
 }
 
-export default SuggestedUsers
+export default SuggestedUsers;
+
