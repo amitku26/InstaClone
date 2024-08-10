@@ -1,3 +1,4 @@
+// /* eslint-disable no-unused-vars */
 // import { create } from "zustand";
 
 // const useAuthStore = create((set) => ({
@@ -7,7 +8,7 @@
 // 	setUser: (user) => set({ user }),
 // }));
 
-// export default useAuthStore;
+//  export default useAuthStore;
 
 import { create } from 'zustand';
 
@@ -40,3 +41,4 @@ const useAuthStore = create((set) => {
 });
 
 export default useAuthStore;
+
