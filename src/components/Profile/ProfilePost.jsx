@@ -176,4 +176,3 @@ const ProfilePost = ({ post }) => {
 };
 
 export default ProfilePost;
-
