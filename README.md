@@ -17,11 +17,11 @@ A social media application that replicates the core features of the original Ins
 ![image alt](https://github.com/amitku26/InstaClone/blob/b7fdeed73b6221a46778d3d2a3a52b143cdf83f2/images/Screenshot%202024-11-27%20171222.png)
 
 ## Features
-- ## User Login/Register : Secure access for users.
-- ## Create Post : Users Can Create Post.
-- ## Dynamic Interaction : Users Can like and comment on each other posts.
+- ### User Login/Register : Secure access for users.
+- ### Create Post : Users Can Create Post.
+- ### Dynamic Interaction : Users Can like and comment on each other posts.
 ## Technologies Used
-- ## Frontend : React, React router-dom, Chakra UI
-- ## Backend : Google Firebase
-- ## Database : Google Firebase Database
-- ## Deployment : Netlify 
+- ### Frontend : React, React router-dom, Chakra UI
+- ### Backend : Google Firebase
+- ### Database : Google Firebase Database
+- ### Deployment : Netlify 
