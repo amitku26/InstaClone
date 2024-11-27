@@ -1,9 +1,10 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# InstaClone
+#  AmitInsta - Instagram | Social Media Web App
+## Overview
+A social media application that replicates the core features of the original Instagram platform. Users can create accounts 
+ upload photos, video, follow like and leave comments.
+ ## Websites
+ You can view the web app here.
+   - ## Website Link: [AmitInsta](https://instasclones.netlify.app)
+## Authentication
+### AmitInsta Authentication
+![image alt](https://github.com/amitku26/InstaClone/blob/5691c8a166d536cc8f50fdc4f217dd3aa2955968/images/Screenshot%202024-11-27%20171149.png)
